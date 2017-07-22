@@ -63,12 +63,11 @@ INSERT INTO Almacen VALUES ('Guadalajara', 'GDL')
 INSERT INTO Almacen VALUES ('Ciudad de MExico', 'CDM')
 
 
--- CONSULTA
+-- CONSULTA 1
 SELECT
 EQ.IdEquipo,
 MC.Descripcion,
 MO.Descripcion,
-NoSerie,
 EQ.NoSerie,
 EQ.Existencia,
 EQ.Proveedor,
@@ -79,6 +78,23 @@ JOIN Marca MC ON EQ.IdMarca = MC.IdMarca
 JOIN Modelo MO ON EQ.IdModelo = MO.IdModelo
 JOIN Almacen AL ON EQ.IdAlmacen = AL.IdAlmacen
 WHERE EQ.IdEquipo = 2
+-------------------------------------------------
+
+-- CONSULTA 2
+SELECT
+EQ.IdEquipo,
+MC.Descripcion,
+MO.Descripcion,
+EQ.NoSerie,
+EQ.Existencia,
+EQ.Proveedor,
+AL.Descripcion
+FROM
+Equipo EQ
+JOIN Marca MC ON EQ.IdMarca = MC.IdMarca
+JOIN Modelo MO ON EQ.IdModelo = MO.IdModelo
+JOIN Almacen AL ON EQ.IdAlmacen = AL.IdAlmacen
+WHERE EQ.IdEquipo = 1
 -------------------------------------------------
 
 --TRUNCATE TABLE Almacen
