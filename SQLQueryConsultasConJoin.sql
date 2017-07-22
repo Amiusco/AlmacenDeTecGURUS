@@ -81,7 +81,7 @@ JOIN Almacen AL ON EQ.IdAlmacen = AL.IdAlmacen
 WHERE EQ.IdEquipo = 2
 -------------------------------------------------
 
-TRUNCATE TABLE Almacen
-TRUNCATE TABLE Marca
-TRUNCATE TABLE Equipo
-TRUNCATE TABLE Modelo
+--TRUNCATE TABLE Almacen
+--TRUNCATE TABLE Marca
+--TRUNCATE TABLE Equipo
+--TRUNCATE TABLE Modelo
